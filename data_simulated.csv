@@ -1,0 +1,1 @@
+powershell -NoProfile -Command "Get-Clipboard | Out-File -Encoding ascii data_simulated.csv"

@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "editor": "wokwi",
+  "author": "Eye Direction Detector",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "potL", "top": -100, "left": -150, "attrs": { "value": "512" } },
+    { "type": "wokwi-potentiometer", "id": "potR", "top": -100, "left": 150, "attrs": { "value": "512" } },
+    { "type": "wokwi-led", "id": "ledL", "top": 250, "left": -60, "attrs": { "color": "blue" } },
+    { "type": "wokwi-led", "id": "ledC", "top": 250, "left": 0, "attrs": { "color": "green" } },
+    { "type": "wokwi-led", "id": "ledR", "top": 250, "left": 60, "attrs": { "color": "red" } },
+    { "type": "wokwi-resistor", "id": "rL", "top": 200, "left": -60, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "rC", "top": 200, "left": 0, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "rR", "top": 200, "left": 60, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    ["potL:GND", "esp:GND.1", "black", []],
+    ["potL:VCC", "esp:3V3", "red", []],
+    ["potL:SIG", "esp:34", "green", []],
+    ["potR:GND", "esp:GND.1", "black", []],
+    ["potR:VCC", "esp:3V3", "red", []],
+    ["potR:SIG", "esp:35", "green", []],
+    ["esp:25", "rL:1", "blue", []],
+    ["rL:2", "ledL:A", "blue", []],
+    ["ledL:C", "esp:GND.1", "black", []],
+    ["esp:26", "rC:1", "green", []],
+    ["rC:2", "ledC:A", "green", []],
+    ["ledC:C", "esp:GND.1", "black", []],
+    ["esp:27", "rR:1", "red", []],
+    ["rR:2", "ledR:A", "red", []],
+    ["ledR:C", "esp:GND.1", "black", []]
+  ]
+}

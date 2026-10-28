@@ -1,0 +1,31 @@
+{
+  "configurations": [
+    {
+      "name": "ESP32",
+      "includePath": [
+        "${workspaceFolder}/eye-tracking-esp32/src",
+        "${workspaceFolder}/eye-tracking-esp32/.pio/build/esp32dev/config",
+        "${env:USERPROFILE}/.platformio/packages/framework-arduinoespressif32/cores/esp32",
+        "${env:USERPROFILE}/.platformio/packages/framework-arduinoespressif32/variants/esp32",
+        "${env:USERPROFILE}/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/**",
+        "${env:USERPROFILE}/.platformio/packages/framework-arduinoespressif32/libraries/**"
+      ],
+      "defines": [
+        "ESP_PLATFORM",
+        "ARDUINO_ARCH_ESP32",
+        "ESP32",
+        "F_CPU=240000000L",
+        "ARDUINO=10812",
+        "ARDUINO_VARIANT=\"esp32\"",
+        "ARDUINO_BOARD=\"Espressif ESP32 Dev Module\""
+      ],
+      "compilerPath": "${env:USERPROFILE}/.platformio/packages/toolchain-xtensa-esp32/bin/xtensa-esp32-elf-gcc.exe",
+      "compilerArgs": [
+        "-mlongcalls"
+      ],
+      "cStandard": "gnu17",
+      "cppStandard": "gnu++11"
+    }
+  ],
+  "version": 4
+}
